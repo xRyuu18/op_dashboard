@@ -26,7 +26,7 @@ Buka browser ke **http://localhost:8000**
 ## Konfigurasi
 
 Buka halaman **Settings** (`/settings`), isi:
-- **Base URL**: alamat OpenProject-mu, contoh `http://10.10.1.102:4002`
+- **Base URL**: alamat OpenProject-mu, contoh `http://xxxxxxxx`
 - **API Key**: dari OpenProject -> My Account -> Access tokens -> API
 
 Tersimpan di `config.json` di folder project (bukan di kode), atau bisa
