@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="mb-4">Hasil Export</h1>
+
+{% if error_message %}
+<div class="alert alert-danger"><strong>Gagal:</strong> <pre class="mb-0">{{ error_message }}</pre></div>
+{% else %}
+<div class="alert alert-success">
+    Project '<strong>{{ result.project_name }}</strong>' (ID {{ result.project_id }})<br>
+    Sub-project ditemukan: <strong>{{ result.subproject_count }}</strong><br>
+    Total task ter-export: <strong>{{ result.task_count }}</strong>
+</div>
+
+{% if result.fetch_errors %}
+<div class="alert alert-warning">
+    <strong>Sebagian project gagal diambil task-nya:</strong>
+    <ul class="mb-0">
+        {% for msg in result.fetch_errors %}<li>{{ msg }}</li>{% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+{% if download_name %}
+<a href="/export/download/{{ download_name }}" class="btn btn-success">Download Excel</a>
+{% endif %}
+{% endif %}
+
+<div class="mt-3">
+    <a href="/export" class="btn btn-secondary">Export lagi</a>
+</div>
+{% endblock %}

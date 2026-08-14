@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="mb-4">Settings</h1>
+<form method="post" action="/settings" class="col-md-6">
+    <div class="mb-3">
+        <label class="form-label">Base URL OpenProject</label>
+        <input type="text" class="form-control" name="base_url" value="{{ cfg.base_url }}"
+               placeholder="http://10.10.1.102:4002" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">API Key</label>
+        <input type="password" class="form-control" name="api_key" value="{{ cfg.api_key }}" required>
+        <div class="form-text">Dari OpenProject: My Account &rarr; Access tokens &rarr; API.</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Simpan</button>
+</form>
+{% endblock %}

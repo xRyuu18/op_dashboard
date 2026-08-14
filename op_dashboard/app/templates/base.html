@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}OpenProject Dashboard{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="/">OpenProject Dashboard</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="/import">Import</a>
+                <a class="nav-link" href="/export">Export</a>
+                <a class="nav-link" href="/settings">Settings</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container pb-5">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
