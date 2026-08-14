@@ -33,7 +33,7 @@ Tersimpan di `config.json` di folder project (bukan di kode), atau bisa
 juga di-set lewat environment variable sebelum run:
 
 ```bash
-export OPENPROJECT_BASE_URL="http://10.10.1.102:4002"
+export OPENPROJECT_BASE_URL="http:xxxxx"
 export OPENPROJECT_API_KEY="xxxxxxxx"
 ```
 
