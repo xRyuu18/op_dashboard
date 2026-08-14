@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="mb-4">Export OpenProject &rarr; Excel</h1>
+<form method="post" action="/export" class="col-md-6">
+    <div class="mb-3">
+        <label class="form-label">Nama project (harus PERSIS sama)</label>
+        <input type="text" class="form-control" name="project_name" required>
+        <div class="form-text">Semua sub-project di bawahnya (berapa level pun) ikut ke-export otomatis.</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Export</button>
+</form>
+{% endblock %}

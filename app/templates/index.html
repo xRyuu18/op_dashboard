@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="mb-4">Import / Export Task OpenProject</h1>
+
+{% if not cfg_ready %}
+<div class="alert alert-warning">
+    Base URL / API Key belum diisi. <a href="/settings">Isi dulu di Settings</a> sebelum pakai fitur di bawah.
+</div>
+{% endif %}
+
+<div class="row g-4">
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Import Excel/CSV &rarr; OpenProject</h5>
+                <p class="card-text">Bikin project baru, otomatis bikin sub-project dari kolom <code>Project</code> (kalau ada), dan import semua task/subitem sesuai hierarki (indentasi atau kolom ID/Parent).</p>
+                <a href="/import" class="btn btn-primary">Mulai Import</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Export OpenProject &rarr; Excel</h5>
+                <p class="card-text">Ketik nama project, otomatis tarik semua sub-project + task-nya, hasilnya file Excel dengan format kolom yang sama kayak import (siap diimport ulang kalau perlu).</p>
+                <a href="/export" class="btn btn-primary">Mulai Export</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
